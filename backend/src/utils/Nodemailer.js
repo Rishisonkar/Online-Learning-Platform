@@ -10,13 +10,13 @@ const transporter = nodemailer.createTransport({
   secure: true, // Use `true` for port 465, `false` for all other ports
   port:465,
   auth: {
-    user: process.env.SMTP_EMAIL,
-    pass: process.env.SMTP_PASS,
+    user: "rishi1801sonkar@gmail.com",
+    pass: "khutftynjmjygjvf",
   },
 });
 
  const receiver={
-    from: process.env.SMTP_EMAIL, // sender address
+    from: "rishi1801sonkar@gmail.com", // sender address
     to: email, // list of receivers
     subject: subject, // Subject line 
     html: message // html body

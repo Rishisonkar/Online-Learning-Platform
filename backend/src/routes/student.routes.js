@@ -10,9 +10,8 @@ router.route("/signup").post(
     signup
 )
 
-router.route("/verify").get(
-    mailVerified
-)
+
+
 
 router.route("/login").post(
     authSchema, login

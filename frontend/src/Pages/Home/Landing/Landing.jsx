@@ -61,7 +61,7 @@ function Landing() {
       <div className="top">
         <div className="left">
           <h1>
-          Empowering Minds, Inspiring Futures: <br />Your Gateway to Online Learning with <span className="font-semibold text-amber-400 font-serif text-5xl">Shiksharthee</span>
+          Empowering Minds, Inspiring Futures: <br />Your Gateway to Online Learning with <span className="font-semibold text-amber-400 font-serif text-5xl">Vidhyarthee</span>
           </h1>
           {/*  Search  */}
 

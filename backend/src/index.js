@@ -1,19 +1,15 @@
-import dotenv from "dotenv"
-import db from './database/db.js';
-import {app} from './app.js'
-dotenv.config({
-    path: './.env'
-})
+import dotenv from "dotenv";
+dotenv.config(); // Load environment variables at the start
 
-console.log(`${process.env.DB_NAME}`);
+import { app } from "./app.js";
+import { db } from "./database/db.js";
 
+const PORT = process.env.PORT || 3000;
 
-db()
-.then(() => {
-    app.listen(process.env.PORT || 8000, () => {
-        console.log(`⚙️ Server is running at port : ${process.env.PORT}`);
-    })
-})
-.catch((err) => {
-    console.log(" mongodb connection failed !!! ", err);
-})
+db().then(() => {
+    app.listen(PORT, () => {
+        console.log(`✅ Server running on http://localhost:${PORT}`);
+    });
+}).catch(err => {
+    console.error("❌ Database connection failed", err);
+});

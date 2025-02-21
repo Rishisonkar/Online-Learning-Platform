@@ -98,9 +98,6 @@ const signup = asyncHandler(async (req, res) =>{
     if(cheakTeach){
         throw new ApiError(400, "Email Belong to Teacher");
     }
-
-    
-
     
     const newStudent = await student.create({
         Email,
